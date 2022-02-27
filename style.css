@@ -1,0 +1,71 @@
+/* Font */
+
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+
+* {
+  font-family: "Odibee Sans", cursive;
+  color: white;
+}
+
+/*CSS specific actions for the clock */
+
+#clock {
+  display: flex;
+  color: rgb(0, 255, 0);
+  font-size: 1000%;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  animation: fadeIn linear 10s;
+  -webkit-animation: fadeIn linear 10s;
+  -moz-animation: fadeIn linear 10s;
+  -o-animation: fadeIn linear 10s;
+  -ms-animation: fadeIn linear 10s;
+  text-shadow: 2px 2px rgb(45, 209, 23);
+}
+
+/* Keyframes required for the fade in of the clock */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html {
+  background: black;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Footer */
+#author {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: whitesmoke;
+  z-index: 1;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+/* Container so that the clock will load over the matrix background
+Couldn't figure out how to do multiple canvas elements and this seems to work */
+
+.containter {
+  margin: 50px 10%;
+  padding: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  z-index: 1;
+}
